@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Stylist</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">✨ StyleDNA</div>
+        <a href="/wardrobe">Wardrobe</a>
+        <a href="/chat">AI Stylist</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <div class="card">
+        <h1>Chat with your AI Stylist 💅</h1>
+
+        {% for msg in chat_history %}
+            <p><b>{{ "You" if msg.role == "user" else "StyleDNA" }}:</b> {{ msg.content }}</p>
+        {% endfor %}
+
+        <form method="POST">
+            <input name="question" placeholder="What should I wear tomorrow?" required>
+            <button class="btn">Ask</button>
+        </form>
+
+        <a href="/chat/clear">Clear chat</a>
+    </div>
+</body>
+</html>

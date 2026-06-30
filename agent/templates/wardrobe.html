@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Wardrobe</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">✨ StyleDNA</div>
+        <a href="/wardrobe">Wardrobe</a>
+        <a href="/chat">AI Stylist</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <div class="card">
+        <h1>My Wardrobe</h1>
+        <form method="POST">
+            <input name="name" placeholder="Item name" required>
+            <select name="category" required>
+                <option value="top">Top</option>
+                <option value="bottom">Bottom</option>
+                <option value="dress">Dress</option>
+                <option value="outerwear">Outerwear</option>
+                <option value="shoes">Shoes</option>
+                <option value="accessory">Accessory</option>
+            </select>
+            <input name="color" placeholder="Color" required>
+            <input name="occasion" placeholder="Occasion" value="casual">
+            <input name="emoji" placeholder="Emoji" value="👕">
+            <button class="btn">Add Item</button>
+        </form>
+    </div>
+
+    {% for item in items %}
+    <div class="card">
+        {{ item.emoji }} {{ item.name }} — {{ item.color }}
+        <a href="/wardrobe/delete/{{ item._id }}">❌</a>
+    </div>
+    {% endfor %}
+</body>
+</html>

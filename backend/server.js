@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import authRoutes from "./routes/auth.routes.js";
 import wardrobeRoutes from "./routes/wardrobe.routes.js";
-import connectMongoDB from "./DB/connectMongoDB.js";
+import connectMongoDB from "./DB/ConnectMongoDB.js";
 
 dotenv.config();
 

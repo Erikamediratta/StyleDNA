@@ -1,0 +1,6 @@
+backend/node_modules/
+backend/.env
+agent/venv/
+agent/__pycache__/
+agent/.env
+*.pyc

@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:5000", credentials: true }));
+app.use(cors({ origin:[ "http://localhost:5000",  "https://grwm-agent.onrender.com"], credentials: true }));
 
 app.use("/api/auth", authRoutes);
 app.use("/api/wardrobe", wardrobeRoutes); 

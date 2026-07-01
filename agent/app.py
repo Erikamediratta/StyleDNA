@@ -80,7 +80,7 @@ def wardrobe():
         requests.post(f"{BACKEND_URL}/wardrobe/add", json=item_data, cookies=cookies)
         return redirect(url_for("wardrobe"))
 
-    response = requests.get(f"{BACKEND_URL}/wardrobe/", cookies=cookies)
+    response = requests.get(f"{BACKEND_URL}/wardrobe", cookies=cookies)
     items = response.json() if response.status_code == 200 else []
 
     return render_template("wardrobe.html", items=items, user=session["user"])

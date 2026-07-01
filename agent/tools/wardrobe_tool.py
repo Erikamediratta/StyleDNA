@@ -16,7 +16,7 @@ def get_wardrobe(occasion: str = "", season: str = "") -> str:
     
     try:
         response = requests.get(
-            f"{BACKEND_URL}/wardrobe/",
+            f"{BACKEND_URL}/wardrobe",
             cookies={"jwt": os.getenv("USER_JWT", "")}
         )
         

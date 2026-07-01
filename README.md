@@ -2,8 +2,8 @@
 
 StyleDNA is a full-stack AI fashion assistant that reasons over real-time weather, a user's personal wardrobe, and expert styling knowledge to generate personalized outfit recommendations — through a genuine multi-step AI agent, not a single prompt-response call.
 
-🔗 **Live Demo:** [add your deployed URL here]
-📂 **GitHub:** [add your repo URL here]
+🔗 **Live Demo:** 
+https://grwm-agent.onrender.com
 
 ---
 
